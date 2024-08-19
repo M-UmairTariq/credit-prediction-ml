@@ -1,0 +1,15 @@
+artifact_uri: file:////mlruns/283525219985850560/77c590f90dd846da808a0fd31b604c6f/artifacts
+end_time: 1723975147725
+entry_point_name: ''
+experiment_id: '283525219985850560'
+lifecycle_stage: active
+run_id: 77c590f90dd846da808a0fd31b604c6f
+run_name: burly-cub-438
+run_uuid: 77c590f90dd846da808a0fd31b604c6f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1723975143212
+status: 3
+tags: []
+user_id: Umair

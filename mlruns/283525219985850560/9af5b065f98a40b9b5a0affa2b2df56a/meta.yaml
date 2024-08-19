@@ -1,0 +1,15 @@
+artifact_uri: file:////mlruns/283525219985850560/9af5b065f98a40b9b5a0affa2b2df56a/artifacts
+end_time: 1723799902449
+entry_point_name: ''
+experiment_id: '283525219985850560'
+lifecycle_stage: active
+run_id: 9af5b065f98a40b9b5a0affa2b2df56a
+run_name: clumsy-whale-10
+run_uuid: 9af5b065f98a40b9b5a0affa2b2df56a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1723799899580
+status: 3
+tags: []
+user_id: Umair

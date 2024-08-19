@@ -1,0 +1,15 @@
+artifact_uri: file:////mlruns/283525219985850560/8a34704bd3b64905be8b8970bc3a116a/artifacts
+end_time: 1723799820302
+entry_point_name: ''
+experiment_id: '283525219985850560'
+lifecycle_stage: active
+run_id: 8a34704bd3b64905be8b8970bc3a116a
+run_name: marvelous-fox-346
+run_uuid: 8a34704bd3b64905be8b8970bc3a116a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1723799817204
+status: 3
+tags: []
+user_id: Umair

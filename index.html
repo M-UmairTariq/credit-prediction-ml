@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Score Prediction - By Umair</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1592204688047-87b01484cc6f') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="form-container bg-gray-800 p-8 rounded-lg shadow-2xl w-full max-w-lg">
+        <h2 class="text-2xl font-bold mb-6 text-center text-blue-400">Credit Score Prediction - By Umair</h2>
+        <form id="prediction-form" class="space-y-4">
+            <div>
+                <label class="block text-gray-300">Age:</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Job:</label>
+                <select id="job" name="job" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+                    <option value="">Select your job</option>
+                    <option value="unemployed">Unemployed</option>
+                    <option value="services">Services</option>
+                    <option value="management">Management</option>
+                    <option value="blue-collar">Blue Collar</option>
+                    <option value="self-employed">Self Employed</option>
+                    <option value="technician">Technician</option>
+                    <option value="admin.">Admin</option>
+                    <option value="entrepreneur">Entrepreneur</option>
+                    <option value="student">Student</option>
+                    <option value="retired">Retired</option>
+                    <option value="housemaid">Housemaid</option>
+                    <option value="unknown">Unknown</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Marital Status:</label>
+                <select id="marital" name="marital" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+                    <option value="">Select your marital status</option>
+                    <option value="married">Married</option>
+                    <option value="single">Single</option>
+                    <option value="divorced">Divorced</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Education:</label>
+                <select id="education" name="education" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+                    <option value="">Select your education level</option>
+                    <option value="primary">Primary</option>
+                    <option value="secondary">Secondary</option>
+                    <option value="tertiary">Tertiary</option>
+                    <option value="unknown">Unknown</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Default on Credit:</label>
+                <select id="default" name="default" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+                    <option value="">Have you defaulted on credit?</option>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Balance:</label>
+                <input type="number" id="balance" name="balance" placeholder="Enter your account balance" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Housing Loan:</label>
+                <select id="housing" name="housing" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+                    <option value="">Do you have a housing loan?</option>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Personal Loan:</label>
+                <select id="loan" name="loan" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+                    <option value="">Do you have a personal loan?</option>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Contact Type:</label>
+                <select id="contact" name="contact" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+                    <option value="">Select your contact type</option>
+                    <option value="cellular">Cellular</option>
+                    <option value="unknown">Unknown</option>
+                    <option value="telephone">Telephone</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Day of the Month:</label>
+                <input type="number" id="day" name="day" placeholder="Enter the day of the month" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Month:</label>
+                <select id="month" name="month" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+                    <option value="">Select the month</option>
+                    <option value="jan">January</option>
+                    <option value="feb">February</option>
+                    <option value="mar">March</option>
+                    <option value="apr">April</option>
+                    <option value="may">May</option>
+                    <option value="jun">June</option>
+                    <option value="jul">July</option>
+                    <option value="aug">August</option>
+                    <option value="sep">September</option>
+                    <option value="oct">October</option>
+                    <option value="nov">November</option>
+                    <option value="dec">December</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Duration:</label>
+                <input type="number" id="duration" name="duration" placeholder="Enter the duration" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Campaign:</label>
+                <input type="number" id="campaign" name="campaign" placeholder="Enter the number of campaign" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Days since Last Contact:</label>
+                <input type="number" id="pdays" name="pdays" placeholder="Enter days since last contact" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Previous Contacts:</label>
+                <input type="number" id="previous" name="previous" placeholder="Enter the number of previous contacts" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+            </div>
+
+            <div>
+                <label class="block text-gray-300">Previous Outcome:</label>
+                <select id="poutcome" name="poutcome" class="border border-gray-600 rounded p-2 w-full bg-gray-900 text-gray-200 focus:ring-blue-500 focus:border-blue-500" required>
+                    <option value="">Select the previous outcome</option>
+                    <option value="unknown">Unknown</option>
+                    <option value="failure">Failure</option>
+                    <option value="success">Success</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <button type="submit" class="bg-blue-600 text-white rounded p-2 w-full mt-6 hover:bg-blue-700 focus:ring focus:ring-blue-400 focus:ring-opacity-50">Predict</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('prediction-form');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('http://0.0.0.0:8000/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                if (!response.ok) {
+                    const errorDetail = await response.json();
+                    throw new Error(errorDetail.detail || 'Unknown error occurred');
+                }
+
+                const result = await response.json();
+
+                
+                alert(`Prediction of Model: ${result.prediction}`);
+            } catch (error) {
+                alert(`Error: ${error.message}`);
+            }
+        });
+    </script>
+</body>
+</html>
